@@ -90,6 +90,7 @@ p{
   button{
     text-transform: uppercase;
     letter-spacing: 1px;
+    word-spacing: 4px;
     display: inline-block;
     font-weight: 700;
     border-radius: 7px;
