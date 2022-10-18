@@ -10,6 +10,9 @@ function showResult(x){
     }else{
         turnShow.innerText = "Player O Won!";
     }
+    for(let i=0; i<9; i++){
+        document.querySelectorAll(".grid-item")[i].classList.add("stopClick");
+    }
 }
 function highlight(x, y, z){
     document.querySelectorAll(".grid-item")[x].classList.add("bgColor");
@@ -25,6 +28,9 @@ function checkDraw(){
             }
         }
         turnShow.innerText = "It's a Draw, Play again!"
+        for(let i=0; i<9; i++){
+            document.querySelectorAll(".grid-item")[i].classList.add("stopClick");
+        }
     }
 }
 
@@ -87,7 +93,7 @@ function reset(){
     turn = true;
     for(let i=0; i<9; i++){
         document.querySelectorAll(".grid-item")[i].innerText = "";
-        document.querySelectorAll(".grid-item")[i].classList.remove("bgColor");
+        document.querySelectorAll(".grid-item")[i].classList.remove("bgColor", "stopClick");
     }
     turnShow.innerText = "Turn for X";
 }
